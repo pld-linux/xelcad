@@ -8,12 +8,11 @@ Group:		X11/Applications/Engeeniering/CAD
 ######		Unknown group!
 Group(pl):	X11/Aplikacje/CAD
 Source0:	http://www.neuss.netsurf.de/~skrodzki/xelcad/%{name}-src.tgz
-Patch0:		xelcad-Makefile.patch
-Patch1:		xelcad-config-fix.patch
+Patch0:		%{name}-Makefile.patch
+Patch1:		%{name}-config-fix.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define	_prefix	/usr/X11R6
-%define _docdir	/usr/share/doc
+%define		_prefix		/usr/X11R6
 
 %description
 XelCAD is a X-based application, designed to create electrical circuit
@@ -23,24 +22,21 @@ application, but it's absolutely sufficient for private-homr usage"
 %description -l pl
 
 %prep
-install -d $RPM_BUILD_DIR/%{name}-%{version}
-cd $RPM_BUILD_DIR/%{name}-%{version}
-tar xfz %SOURCE0
+%setup -q -c
 
 %patch -p0
 %patch1 -p0
 
 %build
-cd %{name}-%{version}/put_me_anywhere
-%{__make} RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
+cd put_me_anywhere
+%{__make} RPM_OPT_FLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-cd %name-%version
 install -d $RPM_BUILD_ROOT%{_docdir}/%{name}-%{version}
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/xelcad/{examples,elements}}
 
-install -s put_me_anywhere/xelcad $RPM_BUILD_ROOT%{_bindir}
+install put_me_anywhere/xelcad $RPM_BUILD_ROOT%{_bindir}
 
 install examples/* $RPM_BUILD_ROOT%{_datadir}/xelcad/examples
 
@@ -48,13 +44,12 @@ cp -Rpd .xelcad/* $RPM_BUILD_ROOT%{_datadir}/xelcad
 cp -Rpd .xelcad/.x* $RPM_BUILD_ROOT%{_datadir}/xelcad
 
 gzip -9nf README
-install README.gz $RPM_BUILD_ROOT%{_docdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(644,root,root) %{_docdir}/%{name}-%{version}/README.gz
+%doc README.gz
 %attr(755,root,root) %{_bindir}/xelcad
 %{_datadir}/xelcad
