@@ -6,7 +6,7 @@ Summary:	xelcad - electricat circuit layouts
 Summary(pl):	xelcad - projektowanie obwodów elektrycznych
 Name:		xelcad
 Version:	0.3
-Release:	4
+Release:	5
 License:	GPL
 Group:		X11/Applications/Science
 #Source0:	http://www.neuss.netsurf.de/~skrodzki/xelcad/%{name}-src.tgz
@@ -18,8 +18,6 @@ Patch2:		%{name}-math.patch
 #URL:		http://www.neuss.netsurf.de/~skrodzki/
 BuildRequires:	xforms-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define		_prefix		/usr/X11R6
 
 %description
 XelCAD is a X-based application, designed to create electrical circuit
@@ -33,19 +31,18 @@ ale ca³kowicie wystarcza do domowego u¿ytku.
 
 %prep
 %setup -q -c
-
 %patch0 -p0
 %patch1 -p0
 %patch2 -p1
 
 %build
-cd put_me_anywhere
-%{__make} RPM_OPT_FLAGS="%{rpmcflags}"
+%{__make} -C put_me_anywhere \
+	RPM_OPT_FLAGS="%{rpmcflags}" \
+	LIBDIR="-L/usr/X11R6/%{_lib}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_docdir}/%{name}-%{version} \
-	$RPM_BUILD_ROOT{%{_bindir},%{_datadir}/xelcad/{examples,elements}}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/xelcad/{examples,elements}}
 
 install put_me_anywhere/xelcad $RPM_BUILD_ROOT%{_bindir}
 
