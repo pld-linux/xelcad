@@ -9,13 +9,13 @@ Version:	0.3
 Release:	4
 License:	GPL
 Group:		X11/Applications/Science
-Source0:	http://www.neuss.netsurf.de/~skrodzki/xelcad/%{name}-src.tgz
-# Source0-md5:	c7cdaa9152d7f1f1a01862567a09dbf0
+#Source0:	http://www.neuss.netsurf.de/~skrodzki/xelcad/%{name}-src.tgz
+Source0:	%{name}-src.tgz
+# Source0-md5:	b6b41464bc0035c92006da8e61cd2acf
 Patch0:		%{name}-Makefile.patch
 Patch1:		%{name}-config-fix.patch
 Patch2:		%{name}-math.patch
-# URL from sources, but seems to be dead
-URL:		http://www.neuss.netsurf.de/~skrodzki/
+#URL:		http://www.neuss.netsurf.de/~skrodzki/
 BuildRequires:	xforms-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
