@@ -1,0 +1,15 @@
+--- put_me_anywhere/Makefile.org	Sat Jan  9 12:02:55 1999
++++ put_me_anywhere/Makefile	Fri Mar 31 09:46:59 2000
+@@ -7,10 +7,10 @@
+           postscript.o
+ 
+ CC = gcc
+-CFLAGS = -Wall -O2 $(INCDIR)
++CFLAGS = -Wall -O2 $(INCDIR) $(RPM_OPT_FLAGS)
+ 
+ LIBS   = -lX11 -lforms -lm
+-LIBDIR = 
++LIBDIR = -L/usr/X11R6/lib
+ INCDIR = -I/usr/X11R6/include -I/usr/include
+ 
+ INSTALLDIR = 
