@@ -9,7 +9,7 @@ Group(pl):	X11/Aplikacje/CAD
 Source0:	http://www.neuss.netsurf.de/~skrodzki/xelcad/%{name}-src.tgz
 Patch0:		xelcad-Makefile.patch
 Patch1:		xelcad-config-fix.patch
-Buildroot:	/tmp/%{name}-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define	_prefix	/usr/X11R6
 %define _docdir	/usr/share/doc
@@ -21,7 +21,6 @@ As author say:
 sufficient for private-homr usage"
 
 %description -l pl
-
 
 %prep
 install -d $RPM_BUILD_DIR/%{name}-%{version}
