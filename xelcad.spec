@@ -1,17 +1,17 @@
-Summary:	xelcad - electricat circuit layouts.
-Summary(pl):	xelcad - projektowanie obwodów elektrycznych.
+Summary:	xelcad - electricat circuit layouts
+Summary(pl):	xelcad - projektowanie obwodów elektrycznych
 Name:		xelcad
 Version:	0.3
 Release:	1
 License:	GPL
-Group:		X11/Applications/Engineering/CAD
-######		Unknown group!
-Group(pl):	X11/Aplikacje/CAD
+Group:		X11/Applications/Science
+Group(de):	X11/Applikationen/Wissenschaft
+Group(pl):	X11/Aplikacje/Nauka
 Source0:	http://www.neuss.netsurf.de/~skrodzki/xelcad/%{name}-src.tgz
 Patch0:		%{name}-Makefile.patch
 Patch1:		%{name}-config-fix.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-BuildRequires:  xforms-devel
+BuildRequires:	xforms-devel
 
 %define		_prefix		/usr/X11R6
 
@@ -21,6 +21,9 @@ layouts. As author say: "It's, of course, not a profesional CAD
 application, but it's absolutely sufficient for private-home usage"
 
 %description -l pl
+XelCAD to aplikacja pod X s³u¿±ca do projektowania obwodów
+elektrycznych. Wed³ug autora, nie jest to profesjonalna aplikacja CAD,
+ale ca³kowicie wystarcza do domowego u¿ytku.
 
 %prep
 %setup -q -c
