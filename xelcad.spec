@@ -12,8 +12,10 @@ Group:		X11/Applications/Science
 Source0:	http://www.neuss.netsurf.de/~skrodzki/xelcad/%{name}-src.tgz
 Patch0:		%{name}-Makefile.patch
 Patch1:		%{name}-config-fix.patch
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+# URL from sources, but seems to be dead
+URL:		http://www.neuss.netsurf.de/~skrodzki/
 BuildRequires:	xforms-devel
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 
@@ -30,7 +32,7 @@ ale ca³kowicie wystarcza do domowego u¿ytku.
 %prep
 %setup -q -c
 
-%patch -p0
+%patch0 -p0
 %patch1 -p0
 
 %build
@@ -44,10 +46,9 @@ install -d $RPM_BUILD_ROOT%{_docdir}/%{name}-%{version} \
 
 install put_me_anywhere/xelcad $RPM_BUILD_ROOT%{_bindir}
 
-install examples/* $RPM_BUILD_ROOT%{_datadir}/xelcad/examples
-
-cp -Rpd .xelcad/* $RPM_BUILD_ROOT%{_datadir}/xelcad
-cp -Rpd .xelcad/.x* $RPM_BUILD_ROOT%{_datadir}/xelcad
+install examples/*	$RPM_BUILD_ROOT%{_datadir}/xelcad/examples
+cp -Rpd .xelcad/*	$RPM_BUILD_ROOT%{_datadir}/xelcad
+cp -Rpd .xelcad/.x*	$RPM_BUILD_ROOT%{_datadir}/xelcad
 
 %clean
 rm -rf $RPM_BUILD_ROOT
