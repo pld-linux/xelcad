@@ -6,12 +6,13 @@ Summary:	xelcad - electricat circuit layouts
 Summary(pl):	xelcad - projektowanie obwodów elektrycznych
 Name:		xelcad
 Version:	0.3
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Science
 Source0:	http://www.neuss.netsurf.de/~skrodzki/xelcad/%{name}-src.tgz
 Patch0:		%{name}-Makefile.patch
 Patch1:		%{name}-config-fix.patch
+Patch2:		%{name}-math.patch
 # URL from sources, but seems to be dead
 URL:		http://www.neuss.netsurf.de/~skrodzki/
 BuildRequires:	xforms-devel
@@ -34,6 +35,7 @@ ale ca³kowicie wystarcza do domowego u¿ytku.
 
 %patch0 -p0
 %patch1 -p0
+%patch2 -p1
 
 %build
 cd put_me_anywhere
