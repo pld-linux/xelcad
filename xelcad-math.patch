@@ -1,0 +1,21 @@
+diff -uNr xelcad-0.3.orig/put_me_anywhere/layout.c xelcad-0.3/put_me_anywhere/layout.c
+--- xelcad-0.3.orig/put_me_anywhere/layout.c	Sat Jan  9 12:08:41 1999
++++ xelcad-0.3/put_me_anywhere/layout.c	Sun Jul 28 15:58:02 2002
+@@ -525,7 +525,7 @@
+                  -(long)((long)(y2-y1)*(long)(x-x1)) );
+   Kekse =  (long)((long)(x2-x1)*(long)(x2-x1))
+           +(long)((long)(y2-y1)*(long)(y2-y1));
+-  Nenner = sqrtl(Kekse);
++  Nenner = sqrt (Kekse);
+ 
+   if(Nenner==0) return -1;
+     
+@@ -547,7 +547,7 @@
+   Laenge=  (long)(  (long)(x2 - x1)*(long)(x2 - x1)  )
+           +(long)(  (long)(y2 - y1)*(long)(y2 - y1)  );
+ 
+-  Laenge=sqrtl(Laenge);
++  Laenge=sqrt (Laenge);
+   
+   return Laenge;
+                       
