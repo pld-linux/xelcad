@@ -1,6 +1,6 @@
 --- put_me_anywhere/Makefile.org	Sat Jan  9 12:02:55 1999
 +++ put_me_anywhere/Makefile	Fri Mar 31 09:46:59 2000
-@@ -7,10 +7,10 @@
+@@ -7,11 +7,11 @@
            postscript.o
  
  CC = gcc
@@ -9,7 +9,9 @@
  
  LIBS   = -lX11 -lforms -lm
 -LIBDIR = 
+-INCDIR = -I/usr/X11R6/include -I/usr/include
 +LIBDIR = -L/usr/X11R6/lib
- INCDIR = -I/usr/X11R6/include -I/usr/include
++INCDIR = -I/usr/X11R6/include/X11 -I/usr/X11R6/include -I/usr/include
  
  INSTALLDIR = 
+ 
