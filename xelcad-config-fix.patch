@@ -1,0 +1,11 @@
+--- .xelcad/.xelcadrc.org	Fri Jun 12 21:20:17 1998
++++ .xelcad/.xelcadrc	Fri Mar 31 10:03:14 2000
+@@ -18,7 +18,7 @@
+ ShowValues=1
+ PageWidth=2000
+ PageHeight=1500
+-LibPath=/home/askr/.xelcad/elements/
++LibPath=/usr/X11R6/share/xelcad/elements/
+ Color0=0
+ Color1=0
+ Color2=2
