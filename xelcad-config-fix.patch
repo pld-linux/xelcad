@@ -5,7 +5,7 @@
  PageWidth=2000
  PageHeight=1500
 -LibPath=/home/askr/.xelcad/elements/
-+LibPath=/usr/X11R6/share/xelcad/elements/
++LibPath=/usr/share/xelcad/elements/
  Color0=0
  Color1=0
  Color2=2
