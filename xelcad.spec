@@ -10,6 +10,7 @@ Release:	4
 License:	GPL
 Group:		X11/Applications/Science
 Source0:	http://www.neuss.netsurf.de/~skrodzki/xelcad/%{name}-src.tgz
+# Source0-md5:	c7cdaa9152d7f1f1a01862567a09dbf0
 Patch0:		%{name}-Makefile.patch
 Patch1:		%{name}-config-fix.patch
 Patch2:		%{name}-math.patch
