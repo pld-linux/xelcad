@@ -11,6 +11,7 @@ Source0:	http://www.neuss.netsurf.de/~skrodzki/xelcad/%{name}-src.tgz
 Patch0:		%{name}-Makefile.patch
 Patch1:		%{name}-config-fix.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+BuildRequires:  xforms-devel
 
 %define		_prefix		/usr/X11R6
 
