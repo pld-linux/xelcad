@@ -1,3 +1,7 @@
+#
+# TODO:
+# - prepare desktop file and png icon.
+#
 Summary:	xelcad - electricat circuit layouts
 Summary(pl):	xelcad - projektowanie obwodów elektrycznych
 Name:		xelcad
@@ -35,8 +39,8 @@ cd put_me_anywhere
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_docdir}/%{name}-%{version}
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/xelcad/{examples,elements}}
+install -d $RPM_BUILD_ROOT%{_docdir}/%{name}-%{version} \
+	$RPM_BUILD_ROOT{%{_bindir},%{_datadir}/xelcad/{examples,elements}}
 
 install put_me_anywhere/xelcad $RPM_BUILD_ROOT%{_bindir}
 
@@ -45,13 +49,11 @@ install examples/* $RPM_BUILD_ROOT%{_datadir}/xelcad/examples
 cp -Rpd .xelcad/* $RPM_BUILD_ROOT%{_datadir}/xelcad
 cp -Rpd .xelcad/.x* $RPM_BUILD_ROOT%{_datadir}/xelcad
 
-gzip -9nf README
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README.gz
+%doc README
 %attr(755,root,root) %{_bindir}/xelcad
 %{_datadir}/xelcad
