@@ -32,7 +32,7 @@ tar xfz %SOURCE0
 
 %build
 cd %{name}-%{version}/put_me_anywhere
-make RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
+%{__make} RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
 
 %install
 rm -rf $RPM_BUILD_ROOT
