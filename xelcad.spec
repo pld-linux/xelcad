@@ -4,7 +4,7 @@ Name:		xelcad
 Version:	0.3
 Release:	1
 License:	GPL
-Group:		X11/Applications/Engeeniering/CAD
+Group:		X11/Applications/Engineering/CAD
 ######		Unknown group!
 Group(pl):	X11/Aplikacje/CAD
 Source0:	http://www.neuss.netsurf.de/~skrodzki/xelcad/%{name}-src.tgz
@@ -17,7 +17,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 XelCAD is a X-based application, designed to create electrical circuit
 layouts. As author say: "It's, of course, not a profesional CAD
-application, but it's absolutely sufficient for private-homr usage"
+application, but it's absolutely sufficient for private-home usage"
 
 %description -l pl
 
