@@ -6,7 +6,7 @@ Summary:	xelcad - electricat circuit layouts
 Summary(pl):	xelcad - projektowanie obwodów elektrycznych
 Name:		xelcad
 Version:	0.3
-Release:	3
+Release:	4
 License:	GPL
 Group:		X11/Applications/Science
 Source0:	http://www.neuss.netsurf.de/~skrodzki/xelcad/%{name}-src.tgz
