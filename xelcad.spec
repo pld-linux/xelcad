@@ -5,8 +5,6 @@ Version:	0.3
 Release:	1
 License:	GPL
 Group:		X11/Applications/Science
-Group(de):	X11/Applikationen/Wissenschaft
-Group(pl):	X11/Aplikacje/Nauka
 Source0:	http://www.neuss.netsurf.de/~skrodzki/xelcad/%{name}-src.tgz
 Patch0:		%{name}-Makefile.patch
 Patch1:		%{name}-config-fix.patch
