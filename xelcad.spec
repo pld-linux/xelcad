@@ -3,7 +3,7 @@
 # - prepare desktop file and png icon.
 #
 Summary:	xelcad - electricat circuit layouts
-Summary(pl):	xelcad - projektowanie obwodÛw elektrycznych
+Summary(pl.UTF-8):   xelcad - projektowanie obwod√≥w elektrycznych
 Name:		xelcad
 Version:	0.3
 Release:	5
@@ -24,10 +24,10 @@ XelCAD is a X-based application, designed to create electrical circuit
 layouts. As author say: "It's, of course, not a profesional CAD
 application, but it's absolutely sufficient for private-home usage"
 
-%description -l pl
-XelCAD to aplikacja pod X s≥uø±ca do projektowania obwodÛw
-elektrycznych. Wed≥ug autora, nie jest to profesjonalna aplikacja CAD,
-ale ca≥kowicie wystarcza do domowego uøytku.
+%description -l pl.UTF-8
+XelCAD to aplikacja pod X s≈Çu≈ºƒÖca do projektowania obwod√≥w
+elektrycznych. Wed≈Çug autora, nie jest to profesjonalna aplikacja CAD,
+ale ca≈Çkowicie wystarcza do domowego u≈ºytku.
 
 %prep
 %setup -q -c
