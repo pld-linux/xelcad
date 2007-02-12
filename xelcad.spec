@@ -3,7 +3,7 @@
 # - prepare desktop file and png icon.
 #
 Summary:	xelcad - electricat circuit layouts
-Summary(pl.UTF-8):   xelcad - projektowanie obwodów elektrycznych
+Summary(pl.UTF-8):	xelcad - projektowanie obwodów elektrycznych
 Name:		xelcad
 Version:	0.3
 Release:	5
