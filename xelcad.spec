@@ -31,9 +31,9 @@ ale całkowicie wystarcza do domowego użytku.
 
 %prep
 %setup -q -c
-%patch0 -p0
-%patch1 -p0
-%patch2 -p1
+%patch -P0 -p0
+%patch -P1 -p0
+%patch -P2 -p1
 
 %build
 %{__make} -C put_me_anywhere \
